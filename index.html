@@ -11,9 +11,11 @@
         padding: 20px;
         background-color: #f0f0f0;
       }
-      h1 {
+      h3 {
         color: #333;
         text-align: center;
+        font-size: 1rem; /* Smaller title for all screens */
+        margin-top: 1rem; /* Remove top margin */
       }
       #calendar-container {
         max-width: 800px;
@@ -39,10 +41,27 @@
         border-radius: 4px;
         font-weight: bold;
       }
+      
+      /* Media query for small screens */
+      @media (max-width: 600px) {
+        body {
+          padding: 0;
+        }
+        #calendar-container {
+          border-radius: 0;
+          box-shadow: none;
+        }
+        .button {
+          width: 100%;
+          max-width: none;
+          margin: 20px 0;
+          border-radius: 0;
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>MONAD COMMUNITY EVENTS Calendar</h1>
+    <h3>Monad Community Events Calendar</h3>
     <div id="calendar-container">
       <div id="loading-spinner">Loading calendar...</div>
       <iframe
